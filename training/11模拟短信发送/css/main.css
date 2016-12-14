@@ -1,0 +1,95 @@
+.box{
+	width: 600px;
+	margin: 50px auto;
+}
+
+.pic-one{
+	width: 100%;
+	height: 90px;
+}
+.content{
+	width: 100%;
+	height: 600px;
+	padding-left: 0;
+	margin-bottom: 0px;
+	list-style: none;
+	overflow : auto;
+	background-color: #e6f5ff;
+}
+
+.more{
+	width: 100%;
+	height: 60px;
+	padding: 5px 5px; 
+	background-color: #b3e0ff;
+}
+
+.people, .text, .btn{
+	height: 50px;
+	border: 1px solid #33adff;
+	border-radius: 4px;
+	float: left;
+}
+
+.people{
+	width: 50px;
+}
+
+.text{
+	width: 410px;
+	margin: 0 30px;
+}
+
+.btn{
+	width: 70px;
+	color: #33adff;
+	background: white;
+}
+
+li{
+	overflow: hidden;
+}
+
+.li-left img, .li-left p{
+	float: left;
+}
+
+.li-right img, .li-right p{
+	float: right;
+}
+
+li img{
+	height: 50px;
+	width: 50px;
+	margin-top: 5px;
+	border: 1px solid #b3e0ff;
+	border-radius: 4px;
+}
+
+.li-left img{
+	margin-left: 5px;
+}
+
+.li-right img{
+	margin-right: 5px;
+}
+
+li p{
+	margin-bottom: 0;
+	max-width: 495px;
+	margin: 15px 20px;
+	font-size: 16px;
+	border: 1px solid #b3e0ff;
+	border-radius: 4px;
+	color: white;
+}
+
+.li-left p{
+	margin-right: 30px;
+	background-color: #99b3ff;
+}
+
+.li-right p{
+	margin-left: 30px;
+	background-color: #ff99cc;
+}

@@ -1,0 +1,28 @@
+p{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: #FF8C00;
+}
+
+body{
+	background-color: #F0F8FF;
+	position: relative;
+	margin: 0 auto;
+	width:200px;
+}
+
+input{
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	margin-top: 20px;
+	border: 2px solid #228B22;
+}
+
+select, button{
+	display: block;
+	width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}

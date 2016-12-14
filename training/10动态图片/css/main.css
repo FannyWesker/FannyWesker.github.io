@@ -1,0 +1,70 @@
+.container{
+	position: relative;
+	width: 100%;
+	padding: 15% 0;
+	text-align: center;
+
+
+}
+.image{
+	display: block;
+	width: 80%;
+	text-align: center;
+}
+img{
+	position: absolute;
+	border-radius: 10px;
+	opacity: 0.9;
+	transition: transform 5s,z-index 2s;
+}
+
+img:hover{
+	transform: rotate(0);
+	z-index: 10;
+}
+
+.one{
+	width: 220px;
+	height: 180px;
+	transform: rotate(-30deg);
+	margin-left: -10%;
+}
+
+.two{
+	width: 400px;
+	height: 300px;
+	transform: rotate(30deg);
+	margin-left: 10%;
+}
+
+.three{
+	width: 300px;
+	height: 220px;
+	transform: rotate(15deg);
+	margin-top: -5%;
+}
+
+.four{
+	width: 280px;
+	height: 200px;
+	transform: rotate(50deg);
+	margin-top: 10%;
+	margin-left: -10%;
+}
+
+.five{
+	width: 400px;
+	height: 350px;
+	transform: rotate(30deg);
+	margin-bottom: 10%;
+}
+
+.six{
+	width: 400px;
+	height: 300px;
+	transform: rotate(-30deg);
+	margin-top: 10%;
+	}
+
+
+
