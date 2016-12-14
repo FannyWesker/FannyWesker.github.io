@@ -11,7 +11,8 @@ btn.onclick = function(){
     [4-data[0][0],4-data[0][1]]
   ];
   str = '';
-  for(i=0;i<5;i++){ str="" +="<div style="left:" +data[i][0]*100+'px;="" top:'+data[i][1]*100+'px"="">'+i+'';
+  for(i=0;i<5;i++){
+	  str += '<div style="left:'+data[i][0]*100+'px; top:'+data[i][1]*100+'px">'+i+'</div>';
   }
 	content.innerHTML = str;
 };
@@ -24,26 +25,54 @@ btn.onclick();
 // 	var top = 0;
 // 	str = '';
 	// if(num==0){
-	// 	for(var i=0;i<5;i++){ left="i*100;" if(i<3){="" top="i*100;" }else{="" };="" str="" +="<div style="left:" +left+'px;="" top:'+top+'px"="">'+i+'';
+	// 	for(var i=0;i<5;i++){
+	// 		left = i*100;
+	// 		if(i<3){
+	// 			top = i*100;
+	// 		}else{
+	// 			top = 400-i*100;
+	// 		};
+	// 		str += '<div style="left:'+left+'px; top:'+top+'px">'+i+'</div>';
 	// 	};
 	// }
 
 	// if(num==1){
-	// 	for(var i=0;i<5;i++){ top="i*100;" if(i<3){="" left="400-i*100;" }else{="" };="" str="" +="<div style="left:" +left+'px;="" top:'+top+'px"="">'+i+'';
+	// 	for(var i=0;i<5;i++){
+	// 		top = i*100;
+	// 		if(i<3){
+	// 			left = 400-i*100;
+	// 		}else{
+	// 			left = i*100;
+	// 		};
+	// 		str += '<div style="left:'+left+'px; top:'+top+'px">'+i+'</div>';
 	// 	};
 	// }
 
 	// if(num==2){
-	// 	for(var i=0;i<5;i++){ left="i*100;" if(i<3){="" top="400-i*100;" }else{="" };="" str="" +="<div style="left:" +left+'px;="" top:'+top+'px"="">'+i+'';
+	// 	for(var i=0;i<5;i++){
+	// 		left = i*100;
+	// 		if(i<3){
+	// 			top = 400-i*100;
+	// 		}else{
+	// 			top = i*100;
+	// 		};
+	// 		str += '<div style="left:'+left+'px; top:'+top+'px">'+i+'</div>';
 	// 	};
 	// }
 
 	// if(num==3){
-	// 	for(var i=0;i<5;i++){ top="i*100;" if(i<3){="" left="i*100;" }else{="" };="" str="" +="<div style="left:" +left+'px;="" top:'+top+'px"="">'+i+'';
+	// 	for(var i=0;i<5;i++){
+	// 		top = i*100;
+	// 		if(i<3){
+	// 			left = i*100;
+	// 		}else{
+	// 			left = 400-i*100;
+	// 		};
+	// 		str += '<div style="left:'+left+'px; top:'+top+'px">'+i+'</div>';
 	// 	};
 	// 	num = -1;
 	// }
 
 // 	num++;
 // 	content.innerHTML = str;
-// }</5;i++){></5;i++){></5;i++){></5;i++){></5;i++){>
+// }

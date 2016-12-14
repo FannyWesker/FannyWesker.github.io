@@ -15,9 +15,9 @@ pic.onclick = function(){
 
 btn.onclick = function(){
 	if(onoff){
-		content.innerHTML += '<li class="li-left"><img src="img/3.jpg"><p>'+text.value+'</p></li>';
+		content.innerHTML += '<li class="li-left"><img src="img/3.jpg"></img><p>'+text.value+'</p></li>';
 	}else{
-		content.innerHTML += '<li class="li-right"><img src="img/2.jpg"><p>'+text.value+'</p></li>';
+		content.innerHTML += '<li class="li-right"><img src="img/2.jpg"></img><p>'+text.value+'</p></li>';
 	};
 	text.value = '';
 }
