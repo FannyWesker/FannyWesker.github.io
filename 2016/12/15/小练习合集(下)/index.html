@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    
+    <meta name="author" content="Fanny Wesker">
+    
+    <meta name="description" content="最初做的小练习都不怎么样啊，不过我相信会越来越好的。这是一个过程，一个进步的过程。下面的练习都是，在家自学两个月后，九月开始实习做的一些训练。
+机票单程搜索界面只是做出了界面，而并未把每个button点击之后的下一步做出来，这时的练习还只是限于html和css上的改动。（虽然已经看过JS了，但在实际">
+    
+    
+
+    
+    <link rel="alternative" href="YOUR_RSS_ADDRESS" title="问号" type="application/atom+xml">
+    
+    
+    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>小练习合集(下) | 问号 · 小白的成长之路</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Javascript -->
+    <script src="/js/jquery-2.1.0.min.js"></script>
+    <script src="/js/jquery.backstretch.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/headroom.min.js"></script>
+    <script src="/js/jquery.headroom.min.js"></script> 
+    <script src="/js/common.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://FannyWesker.github.io" title="问号">问号</a>
+            </div>
+
+            <div role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+                <p class="navbar-text pull-right">小白的成长之路</p>
+
+                <ul class="nav navbar-nav">
+                    
+                    <li id="nav-archives"><a href="/archives">归档</a></li>
+                    
+                    
+                    <li><a href="https://github.com/FannyWesker" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+    var backRoot = "/images/background/";
+    var backArray = [ "1.jpg", "2.jpg", "3.jpg",  ];
+        
+    $(function() {
+        // page-id...
+        var pageId = "2016/12/15/小练习合集(下)/";
+        pageId = pageId.substr(0, pageId.indexOf("/"));
+        if(pageId === "") pageId = "index";
+        
+        $("#nav-" + pageId).addClass("active");
+    });
+    </script>
+
+    <article class="post container">
+    <div class="well post-body first-post last-post">
+        <h1>小练习合集(下)</h1>
+        
+        <div class="time-info">
+发表于:<time datetime="2016-12-15T03:04:40.000Z" itemprop="datePublished">2016-12-15</time>，更新于:<time datetime="2016-12-15T09:04:48.000Z" itemprop="dateModified">2016-12-15</time>，By <a href="https://FannyWesker.github.io" title="Fanny Wesker">Fanny Wesker</a>
+        </div>
+        
+        <div class="post-body-inner">
+            <div id="toc" class="toc-article well">
+                <strong class="toc-title">大纲</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#机票单程搜索界面"><span class="toc-number">1.</span> <span class="toc-text">机票单程搜索界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍页面"><span class="toc-number">2.</span> <span class="toc-text">介绍页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时钟"><span class="toc-number">3.</span> <span class="toc-text">时钟</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态图片"><span class="toc-number">4.</span> <span class="toc-text">动态图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模拟短信发送"><span class="toc-number">5.</span> <span class="toc-text">模拟短信发送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#V字变换"><span class="toc-number">6.</span> <span class="toc-text">V字变换</span></a></li></ol>
+            </div>
+            
+            <p>最初做的小练习都不怎么样啊，不过我相信会越来越好的。这是一个过程，一个进步的过程。下面的练习都是，在家自学两个月后，九月开始实习做的一些训练。</p>
+<h3 id="机票单程搜索界面"><a href="#机票单程搜索界面" class="headerlink" title="机票单程搜索界面"></a>机票单程搜索界面</h3><p>只是做出了界面，而并未把每个button点击之后的下一步做出来，这时的练习还只是限于html和css上的改动。（虽然已经看过JS了，但在实际的训练中，还不知道具体该怎么用）<br>【<a href="/training/7机票单程搜索/index.html">🐰效果，在这里…</a>】</p>
+<h3 id="介绍页面"><a href="#介绍页面" class="headerlink" title="介绍页面"></a>介绍页面</h3><p>这是一个类似于展示产品的，介绍页面。制作当前一页，不需要太多的js代码。比较静态的一个页面，在最初练习html和css布局会比较好。页面内有很多相同的结构，掌握了一个，之后的也会很容易的做出来了。这个练习，也是我第一次做移动适配。其他练习均没有做了。<br>【<a href="/training/8产品介绍/index.html">🐰效果，在这里…</a>】</p>
+<h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><p>可以看当前时间的时钟。不了解时感觉不容易，掌握思路就简单了。【<a href="/training/9动画-时钟/index.html">🐰效果，在这里…</a>】</p>
+<ol>
+<li><p>首先，需要四张图片，分别是，表盘、时针、分针、秒针。</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//放四张上述所需图片</div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"update()"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"face"</span> <span class="attr">src</span>=<span class="string">"Clock/clockFace.png"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"hour"</span> <span class="attr">src</span>=<span class="string">"Clock/hourHand.png"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"minute"</span> <span class="attr">src</span>=<span class="string">"Clock/minuteHand.png"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"second"</span> <span class="attr">src</span>=<span class="string">"Clock/secondHand.png"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>把四张图片重叠放在一起。img的父元素的定位需要是相对的，img做成绝对定位，这样可使图片重叠。</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">width</span>: <span class="number">960px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">960px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">20%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>JS使的指针动起来，指针动其实就是到一定时间后，图片多少角度的偏移。</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">update</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">//现在时间的获取</span></div><div class="line">  <span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">  <span class="keyword">var</span> h = today.getHours()*<span class="number">60</span>;     <span class="comment">//小时换成分钟数     </span></div><div class="line">  <span class="keyword">var</span> m = today.getMinutes();</div><div class="line">  <span class="keyword">var</span> s = today.getSeconds();</div><div class="line">  <span class="comment">//每秒钟，每张图片所要偏移的角度的计算</span></div><div class="line">  <span class="keyword">var</span> h_deg = (h+m)*<span class="number">0.5</span>;</div><div class="line">  <span class="keyword">var</span> m_deg = m*<span class="number">6</span>;</div><div class="line">  <span class="keyword">var</span> s_deg = s*<span class="number">6</span>;</div><div class="line">  <span class="comment">//给指针图片设置Css样式，使它偏移一秒所需要的角度</span></div><div class="line">  $(<span class="string">".hour"</span>)[<span class="number">0</span>].style.transform = <span class="string">"rotate("</span>+h_deg+<span class="string">"deg)"</span>;</div><div class="line">  $(<span class="string">".minute"</span>)[<span class="number">0</span>].style.transform = <span class="string">"rotate("</span>+m_deg+<span class="string">"deg)"</span>;</div><div class="line">  $(<span class="string">".second"</span>)[<span class="number">0</span>].style.transform = <span class="string">"rotate("</span>+s_deg+<span class="string">"deg)"</span>;</div><div class="line">  <span class="comment">//设置1秒后执行该函数，便可达到时钟每秒都在转动</span></div><div class="line">  setTimeout(<span class="string">"update()"</span>,<span class="number">1000</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="动态图片"><a href="#动态图片" class="headerlink" title="动态图片"></a>动态图片</h3><p>鼠标放在图片上后，图片会自己动。【<a href="/training/10动态图片/index.html">🐰效果，在这里…</a>】<br>这个比较简单，就只讲讲思路。插入几张图片，根据<strong><code>position</code></strong>可让他们重叠。给每张图片设置现在偏移的角度，再设置一下<strong><code>transition</code></strong>,他们的运动时间等。最后是设置<strong><code>img:hover</code></strong>的效果就好啦。</p>
+<h3 id="模拟短信发送"><a href="#模拟短信发送" class="headerlink" title="模拟短信发送"></a>模拟短信发送</h3><p>一个模拟两个人聊天的界面，可以自由换角色，也可以发你想说的话。【<a href="/training/11模拟短信发送/index.html">🐰先放效果…</a>】</p>
+<ol>
+<li>先把布局做出来，可以分为三块：上中下。上面深蓝色部分是直接用的图片。中间部分是聊天内容展示部分，用<code>&lt;ul&gt;</code>做。下面深蓝色这块，由三个小块组成：人物头像<code>&lt;img&gt;</code>，信息输入的<code>&lt;input&gt;</code>，和发送按钮。</li>
+<li>调整css，调成类似与聊天软件对话聊天的界面。</li>
+<li>写JS。主要是两部分：一，当点击头像时，需要切换头像。这里可以做一个开关(<code>var onoff = true;</code>)去判断，来切换图片，每次点击头像后，<code>onoff != onoff</code>;二，将头像和输入的内容获取到写入第二大块的显示区域。</li>
+</ol>
+<h3 id="V字变换"><a href="#V字变换" class="headerlink" title="V字变换"></a>V字变换</h3><p>【<a href="/training/12v字变换/index.html">🐰直接上效果…</a>】自己写js的时候，写的特别长，做出了效果。结果，经指导后，发现完全可以少量代码就做出来的。<br>html文件：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"click"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Css文件：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.one</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">100px</span> auto;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.btn</span>&#123;</div><div class="line">  <span class="attribute">background-color</span>: white;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid black;</div><div class="line">  <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.content</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.content</span> <span class="selector-tag">div</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">color</span>: white;</div><div class="line">  <span class="attribute">background-color</span>: pink;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">43px</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Js文件:包含最开始写的和知道之后的，做个对比。<br>指导更改后的：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btn = $(<span class="string">'.btn'</span>)[<span class="number">0</span>];</div><div class="line"><span class="keyword">var</span> content = $(<span class="string">'.content'</span>)[<span class="number">0</span>];</div><div class="line">data = [[<span class="number">0</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">1</span>], [<span class="number">4</span>, <span class="number">0</span>]];</div><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  data = [</div><div class="line">    data[<span class="number">4</span>], </div><div class="line">    data[<span class="number">3</span>], </div><div class="line">    data[<span class="number">2</span>], </div><div class="line">    [<span class="number">4</span>-data[<span class="number">1</span>][<span class="number">0</span>],<span class="number">4</span>-data[<span class="number">1</span>][<span class="number">1</span>]], </div><div class="line">    [<span class="number">4</span>-data[<span class="number">0</span>][<span class="number">0</span>],<span class="number">4</span>-data[<span class="number">0</span>][<span class="number">1</span>]]</div><div class="line">  ];</div><div class="line">  str = <span class="string">''</span>;</div><div class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</div><div class="line">    str += <span class="string">'&lt;div style="left:'</span>+data[i][<span class="number">0</span>]*<span class="number">100</span>+<span class="string">'px; top:'</span>+data[i][<span class="number">1</span>]*<span class="number">100</span>+<span class="string">'px"&gt;'</span>+i+<span class="string">'&lt;/div&gt;'</span>;</div><div class="line">  &#125;</div><div class="line">  content.innerHTML = str;</div><div class="line">&#125;;</div><div class="line">btn.onclick();</div></pre></td></tr></table></figure></p>
+<p>最开始之前的：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btn = $(<span class="string">'.btn'</span>)[<span class="number">0</span>];</div><div class="line"><span class="keyword">var</span> content = $(<span class="string">'.content'</span>)[<span class="number">0</span>];</div><div class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</div><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> left = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> top = <span class="number">0</span>;</div><div class="line">  str = <span class="string">''</span>;</div><div class="line">  <span class="keyword">if</span>(num==<span class="number">0</span>)&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</div><div class="line">      left = i*<span class="number">100</span>;</div><div class="line">      <span class="keyword">if</span>(i&lt;<span class="number">3</span>)&#123;</div><div class="line">        top = i*<span class="number">100</span>;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        top = <span class="number">400</span>-i*<span class="number">100</span>;</div><div class="line">      &#125;;</div><div class="line">      str += <span class="string">'&lt;div style="left:'</span>+left+<span class="string">'px; top:'</span>+top+<span class="string">'px"&gt;'</span>+i+<span class="string">'&lt;/div&gt;'</span>;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span>(num==<span class="number">1</span>)&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</div><div class="line">      top = i*<span class="number">100</span>;</div><div class="line">      <span class="keyword">if</span>(i&lt;<span class="number">3</span>)&#123;</div><div class="line">        left = <span class="number">400</span>-i*<span class="number">100</span>;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        left = i*<span class="number">100</span>;</div><div class="line">      &#125;;</div><div class="line">    str += <span class="string">'&lt;div style="left:'</span>+left+<span class="string">'px; top:'</span>+top+<span class="string">'px"&gt;'</span>+i+<span class="string">'&lt;/div&gt;'</span>;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span>(num==<span class="number">2</span>)&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</div><div class="line">      left = i*<span class="number">100</span>;</div><div class="line">      <span class="keyword">if</span>(i&lt;<span class="number">3</span>)&#123;</div><div class="line">        top = <span class="number">400</span>-i*<span class="number">100</span>;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">      top = i*<span class="number">100</span>;</div><div class="line">      &#125;;</div><div class="line">    str += <span class="string">'&lt;div style="left:'</span>+left+<span class="string">'px; top:'</span>+top+<span class="string">'px"&gt;'</span>+i+<span class="string">'&lt;/div&gt;'</span>;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span>(num==<span class="number">3</span>)&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</div><div class="line">      top = i*<span class="number">100</span>;</div><div class="line">      <span class="keyword">if</span>(i&lt;<span class="number">3</span>)&#123;</div><div class="line">        left = i*<span class="number">100</span>;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        left = <span class="number">400</span>-i*<span class="number">100</span>;</div><div class="line">      &#125;;</div><div class="line">      str += <span class="string">'&lt;div style="left:'</span>+left+<span class="string">'px; top:'</span>+top+<span class="string">'px"&gt;'</span>+i+<span class="string">'&lt;/div&gt;'</span>;</div><div class="line">    &#125;;</div><div class="line">    num = <span class="number">-1</span>;</div><div class="line">  &#125;</div><div class="line">  num++;</div><div class="line">  content.innerHTML = str;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>有时候方法是很重要的。需要好好看看Js的算法。见得多了，就会了。所以需要勤加练习啊。<br>END</p>
+
+
+			
+            <section class="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="/2016/12/15/小练习合集(下)/" data-title="小练习合集(下)" data-url="https://FannyWesker.github.io/2016/12/15/小练习合集(下)/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cwhh"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+        </div>
+    </div>
+</article>
+
+    <footer id="footer">
+    <div id="bottom-tip">
+        问号 —— <small>小白的成长之路</small>
+    </div>
+
+        <!-- <small>该博客由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动，搭载 <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> 主题</small><br /> -->
+
+        <small>【可爱脸】前端小白&&时而安静时而抽疯</small><br/>
+        <small><a href="https://github.com/FannyWesker" target="_blank">&copy; 2016 Fanny Wesker</a></small>
+    </footer>
+
+    
+
+
+</body>
+</html>
+
