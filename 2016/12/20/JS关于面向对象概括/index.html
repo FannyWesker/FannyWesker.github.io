@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    
+    <meta name="author" content="Fanny Wesker">
+    
+    <meta name="description" content="面向对象编程的含义、特点含义：用对象的思想去写代码。
+特点：抽象、封装、继承、多态。
+基本写法和组成对象的组成：
+方法————函数：过程、动态的
+属性————变量：状态、静态的
+方法和属性最简单的区别：看后面有没有跟括号    
+123456var arr = new Array();arr.num">
+    
+    
+
+    
+    <link rel="alternative" href="YOUR_RSS_ADDRESS" title="问号" type="application/atom+xml">
+    
+    
+    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS关于面向对象概括 | 问号 · 小白的成长之路</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Javascript -->
+    <script src="/js/jquery-2.1.0.min.js"></script>
+    <script src="/js/jquery.backstretch.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/headroom.min.js"></script>
+    <script src="/js/jquery.headroom.min.js"></script> 
+    <script src="/js/common.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://FannyWesker.github.io" title="问号">问号</a>
+            </div>
+
+            <div role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+                <p class="navbar-text pull-right">小白的成长之路</p>
+
+                <ul class="nav navbar-nav">
+                    
+                    <li id="nav-archives"><a href="/archives">归档</a></li>
+                    
+                    
+                    <li><a href="https://github.com/FannyWesker" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+    var backRoot = "/images/background/";
+    var backArray = [ "1.jpg", "2.jpg", "3.jpg",  ];
+        
+    $(function() {
+        // page-id...
+        var pageId = "2016/12/20/JS关于面向对象概括/";
+        pageId = pageId.substr(0, pageId.indexOf("/"));
+        if(pageId === "") pageId = "index";
+        
+        $("#nav-" + pageId).addClass("active");
+    });
+    </script>
+
+    <article class="post container">
+    <div class="well post-body first-post last-post">
+        <h1>JS关于面向对象概括</h1>
+        
+        <div class="time-info">
+发表于:<time datetime="2016-12-20T05:52:27.000Z" itemprop="datePublished">2016-12-20</time>，更新于:<time datetime="2016-12-20T08:15:58.000Z" itemprop="dateModified">2016-12-20</time>，By <a href="https://FannyWesker.github.io" title="Fanny Wesker">Fanny Wesker</a>
+        </div>
+        
+        <div class="post-body-inner">
+            <div id="toc" class="toc-article well">
+                <strong class="toc-title">大纲</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#面向对象编程的含义、特点"><span class="toc-number">1.</span> <span class="toc-text">面向对象编程的含义、特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本写法和组成"><span class="toc-number">2.</span> <span class="toc-text">基本写法和组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面向对象的工厂方式（封装函数）"><span class="toc-number">3.</span> <span class="toc-text">面向对象的工厂方式（封装函数）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原型-工厂方式的优化"><span class="toc-number">4.</span> <span class="toc-text">原型(工厂方式的优化)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面向对象的写法总结"><span class="toc-number">5.</span> <span class="toc-text">面向对象的写法总结</span></a></li></ol>
+            </div>
+            
+            <h3 id="面向对象编程的含义、特点"><a href="#面向对象编程的含义、特点" class="headerlink" title="面向对象编程的含义、特点"></a>面向对象编程的含义、特点</h3><pre><code>含义：用对象的思想去写代码。
+特点：抽象、封装、继承、多态。
+</code></pre><h3 id="基本写法和组成"><a href="#基本写法和组成" class="headerlink" title="基本写法和组成"></a>基本写法和组成</h3><pre><code>对象的组成：
+方法————函数：过程、动态的
+属性————变量：状态、静态的
+方法和属性最简单的区别：看后面有没有跟括号    
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line">arr.number = <span class="number">10</span>;		<span class="comment">//对象下面的变量(number)：叫做对象的属性</span></div><div class="line">arr.test = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;		<span class="comment">//对象下面的函数(test)：叫做对象的方法</span></div><div class="line">  alert(<span class="number">123</span>);</div><div class="line">&#125;;</div><div class="line">arr.test();</div></pre></td></tr></table></figure>
+<h3 id="面向对象的工厂方式（封装函数）"><a href="#面向对象的工厂方式（封装函数）" class="headerlink" title="面向对象的工厂方式（封装函数）"></a>面向对象的工厂方式（封装函数）</h3><pre><code>当new去调用一个函数：函数中的this就是创建出来的对象，而且函数的返回值就是this（隐式返回）。
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">CreatePerson</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">  <span class="keyword">this</span>.showName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="keyword">this</span>.name)</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> CreatePerson(<span class="string">'Fanny'</span>);		<span class="comment">//new后面调用的函数：叫做构造函数。</span></div><div class="line">p1.showName();		<span class="comment">//面向对象的方法</span></div><div class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> CreatePerson(<span class="string">'heaven'</span>);</div><div class="line">p2.showName();</div><div class="line">...</div></pre></td></tr></table></figure>
+<pre><code>工厂方法与原型结合的写法，性能更好，推荐。
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">CreatePerson</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">&#125;		<span class="comment">//不同处</span></div><div class="line">CreatePerson.prototype.showName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;		<span class="comment">//不同处</span></div><div class="line">    alert(<span class="keyword">this</span>.name)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> CreatePerson(<span class="string">'Fanny'</span>);	</div><div class="line">p1.showName();</div><div class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> CreatePerson(<span class="string">'heaven'</span>);</div><div class="line">p2.showName();</div><div class="line">...</div></pre></td></tr></table></figure>
+<h3 id="原型-工厂方式的优化"><a href="#原型-工厂方式的优化" class="headerlink" title="原型(工厂方式的优化)"></a>原型(工厂方式的优化)</h3><pre><code>去改写对象下面公用的方法或属性，让共用的方法或属性在内存中存在一份。这样，可以提高性能。
+原型：相当于CSS中的class。
+普通方法：相当于CSS中的style。
+原型写法：prototype（要写在构造函数的下面）
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>];</div><div class="line"><span class="built_in">Array</span>.prototype.sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> result = <span class="number">0</span>;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.length,i++)&#123;</div><div class="line">    result += <span class="keyword">this</span>[i];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;;</div><div class="line">alert(arr.sum());		<span class="comment">//15</span></div><div class="line">alert(arr2.sum());		<span class="comment">//10</span></div><div class="line">...</div></pre></td></tr></table></figure>
+<h3 id="面向对象的写法总结"><a href="#面向对象的写法总结" class="headerlink" title="面向对象的写法总结"></a>面向对象的写法总结</h3><pre><code>构造函数：new后面调用的函数。
+原型写法：prototype。
+方法：函数。
+属性：变量。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function 构造函数()&#123;</div><div class="line">  this.属性</div><div class="line">&#125;</div><div class="line">构造函数.原型.方法 = function()&#123;&#125;;</div><div class="line">var 对象1 = new 构造函数();</div><div class="line">对象1.方法();</div></pre></td></tr></table></figure>
+
+
+			
+            <section class="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="/2016/12/20/JS关于面向对象概括/" data-title="JS关于面向对象概括" data-url="https://FannyWesker.github.io/2016/12/20/JS关于面向对象概括/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cwhh"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+        </div>
+    </div>
+</article>
+
+    <footer id="footer">
+    <div id="bottom-tip">
+        问号 —— <small>小白的成长之路</small>
+    </div>
+
+        <!-- <small>该博客由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动，搭载 <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> 主题</small><br /> -->
+
+        <small>【可爱脸】前端小白&&时而安静时而抽疯</small><br/>
+        <small><a href="https://github.com/FannyWesker" target="_blank">&copy; 2016 Fanny Wesker</a></small>
+    </footer>
+
+    
+
+
+</body>
+</html>
+
