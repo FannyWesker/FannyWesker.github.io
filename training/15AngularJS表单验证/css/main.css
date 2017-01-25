@@ -1,0 +1,22 @@
+.wrapper{
+	width: 200px;
+	margin: 30px auto;
+}
+
+p.error{
+	color: #a10;
+}
+
+.has-success{
+	border: 1px solid #3c763d；
+}
+
+.input-result{
+	position: relative;
+	top: -27px;
+	left: 180px;
+}
+
+.success{
+	color: #3c763d;
+}
