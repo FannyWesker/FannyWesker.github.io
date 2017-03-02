@@ -7,8 +7,9 @@
     <meta name="author" content="Fanny Wesker">
     
     <meta name="description" content="看了许多🐟AngularJs相关的教学视频，都还没有做什么笔记。现在就根据今天开始看的一些实例，来做一些知识小点。应该会比较零散和简略（个人不太喜欢做笔记【无奈脸】），但记在这里，以后可以看看。
-:$watch:关于相关数据变化的监听newVal: 变化之后的数据。
-oldVal：变化之前的数据。">
+$watch:关于相关数据变化的监听newVal: 变化之后的数据。
+oldVal：变化之前的数据。
+">
     
     
 
@@ -88,17 +89,20 @@ oldVal：变化之前的数据。">
         <h1>AngularJs 知识散点（1）</h1>
         
         <div class="time-info">
-发表于:<time datetime="2017-02-27T06:33:51.000Z" itemprop="datePublished">2017-02-27</time>，更新于:<time datetime="2017-02-27T10:36:09.000Z" itemprop="dateModified">2017-02-27</time>，By <a href="https://FannyWesker.github.io" title="Fanny Wesker">Fanny Wesker</a>
+发表于:<time datetime="2017-02-27T06:33:51.000Z" itemprop="datePublished">2017-02-27</time>，更新于:<time datetime="2017-02-27T10:40:45.000Z" itemprop="dateModified">2017-02-27</time>，By <a href="https://FannyWesker.github.io" title="Fanny Wesker">Fanny Wesker</a>
+
+<span id="busuanzi_container_page_pv">，本文共被围观<span id="busuanzi_value_page_pv"></span>次</span>
+
         </div>
         
         <div class="post-body-inner">
             <div id="toc" class="toc-article well">
                 <strong class="toc-title">大纲</strong>
-                <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#watch-关于相关数据变化的监听"><span class="toc-number">1.</span> <span class="toc-text">:$watch:关于相关数据变化的监听</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#angular-bind-：改变this指向。"><span class="toc-number">2.</span> <span class="toc-text">angular.bind()：改变this指向。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#angular-copy-拷贝对象。"><span class="toc-number">3.</span> <span class="toc-text">angular.copy();:拷贝对象。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#angular-extend-对象继承。"><span class="toc-number">4.</span> <span class="toc-text">angular.extend();:对象继承。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断类型的工具方法。-返回布尔值"><span class="toc-number">5.</span> <span class="toc-text">判断类型的工具方法。(返回布尔值)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他工具方法。"><span class="toc-number">6.</span> <span class="toc-text">其他工具方法。</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#watch-关于相关数据变化的监听"><span class="toc-number">1.</span> <span class="toc-text">$watch:关于相关数据变化的监听</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#angular-bind-：改变this指向。"><span class="toc-number">2.</span> <span class="toc-text">angular.bind()：改变this指向。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#angular-copy-拷贝对象。"><span class="toc-number">3.</span> <span class="toc-text">angular.copy();:拷贝对象。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#angular-extend-对象继承。"><span class="toc-number">4.</span> <span class="toc-text">angular.extend();:对象继承。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断类型的工具方法。-返回布尔值"><span class="toc-number">5.</span> <span class="toc-text">判断类型的工具方法。(返回布尔值)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他工具方法。"><span class="toc-number">6.</span> <span class="toc-text">其他工具方法。</span></a></li></ol>
             </div>
             
             <p>看了许多🐟AngularJs相关的教学视频，都还没有做什么笔记。现在就根据今天开始看的一些实例，来做一些知识小点。应该会比较零散和简略（个人不太喜欢做笔记【无奈脸】），但记在这里，以后可以看看。</p>
-<h4 id="watch-关于相关数据变化的监听"><a href="#watch-关于相关数据变化的监听" class="headerlink" title=":$watch:关于相关数据变化的监听"></a>:<code>$watch</code>:关于相关数据变化的<strong>监听</strong></h4><pre><code>newVal: 变化之后的数据。
+<h4 id="watch-关于相关数据变化的监听"><a href="#watch-关于相关数据变化的监听" class="headerlink" title="$watch:关于相关数据变化的监听"></a><code>$watch</code>:关于相关数据变化的<strong>监听</strong></h4><pre><code>newVal: 变化之后的数据。
 oldVal：变化之前的数据。
 </code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$scope.$watch(<span class="string">'需要监听的数据'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> newVal, oldVal</span>)</span>&#123;</div><div class="line">  ...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <pre><code>深入监听：$scope.$watch(&apos;需要监听的数据&apos;, function( newVal, oldVal){ ... } ,true)
@@ -142,14 +146,19 @@ var duoshuoQuery = {short_name:"cwhh"};
 </article>
 
     <footer id="footer">
-    <div id="bottom-tip">
-        问号 —— <small>小白的成长之路</small>
-    </div>
+    	<div id="bottom-tip">
+        	问号 —— <small>小白的成长之路</small>
+    	</div>
 
         <!-- <small>该博客由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动，搭载 <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> 主题</small><br /> -->
 
-        <small>【可爱脸】前端小白&&时而安静时而抽疯</small><br/>
-        <small><a href="https://github.com/FannyWesker" target="_blank">&copy; 2016 Fanny Wesker</a></small>
+        <small>【可爱脸】前端小白&&时而安静时而抽疯</small>
+        <small><a href="https://github.com/FannyWesker" target="_blank">&copy; 2016 Fanny Wesker</a></small></br>
+        <!-- 访问量 -->
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <small><span id="busuanzi_container_site_uv">您是本站第<span id="busuanzi_value_site_uv"></span>位小伙伴</span></small>
+        <small><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></small>
+
     </footer>
 
     
